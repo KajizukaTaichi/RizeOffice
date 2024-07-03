@@ -1,6 +1,6 @@
 header {
-    background:linear-gradient(to right, blueviolet, white);
-    position: fixed;
+    background:linear-gradient(to right, blueviolet, rgb(231, 193, 238));
+    /* position: fixed; */
     color: white;
     height: 10vh;
     width: 100%;
@@ -10,14 +10,27 @@ header p {
     padding: 2vh;
 }
 
+tr:first-child {
+    position: sticky;
+    top: 0;
+}
+
+td:first-child {
+    position: sticky;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    left: 0;
+}
+
 #sheet {
-    padding-top: 10vh;
-    height: 80%;
+    /* padding-top: 10vh; */
+    height: 90vh;
     width: 100%;
     overflow: scroll;
 }
 
 td {
+    font-weight: normal;
     text-align: center;
 
     border-top: none;
