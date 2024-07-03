@@ -1,9 +1,27 @@
 header {
     background:linear-gradient(to right, blueviolet, rgb(231, 193, 238));
-    /* position: fixed; */
     color: white;
     height: 10vh;
     width: 100%;
+}
+
+#menubar {
+    border-bottom-style: solid;
+    height: 6vh;
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+#menubar input {
+    outline: none;
+}
+
+.splitLine {
+    padding: 1vh;
+    border-right-style: solid;
+    display: inline-block;
+    border-color: lightgray;
+    border-width: 1px;
 }
 
 header p {
@@ -23,8 +41,7 @@ td:first-child {
 }
 
 #sheet {
-    /* padding-top: 10vh; */
-    height: 90vh;
+    height: 84vh;
     width: 100%;
     overflow: scroll;
 }
@@ -43,6 +60,6 @@ td {
     border-right-width: 1px;
 }
 
-input {
+td input {
     border: none;
 }

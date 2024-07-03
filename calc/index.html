@@ -15,6 +15,22 @@
             </p>
         </header>
 
+        <div id="menubar">
+            <div class="splitLine">
+                <label for="fontSize">Font size: </label>
+                <input id="fontSize">
+            </div>
+
+            <div class="splitLine">
+                <label for="fontColor">Font color: </label>
+                <input id="fontColor">
+            </div>
+            
+            <div class="splitLine">
+                <label for="backColor">Back color: </label>
+                <input id="backColor">
+            </div>
+        </div>
         <div id="sheet"></div>
 
         <div class="stack">
@@ -52,19 +68,7 @@
             table sheet append-child
         </div> 
 
-        <script>
-            document.addEventListener("keydown", function(event) {
-                if (event.code === "Enter") {
-                    const inputs = document.querySelectorAll('input');
-                    let program = "";
-                    inputs.forEach(input => {
-                        program +=`${input.value} ${input.id} var\n`;
-                    });
-                    document.activeElement.value = window.run_stack(`${program} ${document.activeElement.value} print`).output();
-                }
-            });
-        </script>
-
+        <script src="script.js"></script>
         <script src="https://stack-community.github.io/stack.js" type="module"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
