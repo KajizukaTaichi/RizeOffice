@@ -1,0 +1,29 @@
+header {
+    background:linear-gradient(to right, blueviolet, white);
+    position: fixed;
+    color: white;
+    height: 10vh;
+    width: 100%;
+}
+
+header p {
+    padding: 2vh;
+}
+
+#sheet {
+    padding-top: 10vh;
+    height: 80%;
+    width: 100%;
+    overflow: scroll;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+
+    border-bottom-color: gray;
+    border-right-color: gray;
+
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+}
