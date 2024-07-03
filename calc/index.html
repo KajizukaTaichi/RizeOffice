@@ -21,9 +21,9 @@
             (sheet) get-element-by-id (sheet) var
             (table) create-element (table) var
             
-            0 100 1 range (i) (
+            0 30 1 range (i) (
                 (tr) create-element (tr) var
-                0 30 1 range (j) (
+                0 10 1 range (j) (
                     (td) create-element (td) var
                     (input) create-element (cell) var
                     [i j] (-) join cell set-id
@@ -38,7 +38,13 @@
         <script>
             document.addEventListener("keydown", function(event) {
                 if (event.code === "Enter") {
-                    document.activeElement.value = window.run_stack(`${document.activeElement.value} print`).output();
+                    const inputs = document.querySelectorAll('input');
+                    let program;
+
+                    inputs.forEach(input => {
+                        program +=`${input.value} ${input.id} var\n`;
+                    });
+                    document.activeElement.value = window.run_stack(`${program.replace("undefined", "")} ${document.activeElement.value} print`).output();
                 }
             });
         </script>
