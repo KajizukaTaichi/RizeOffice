@@ -14,15 +14,32 @@
                 RizeOffice Clac - Built on Stack technology
             </p>
         </header>
-    
+
         <div id="sheet"></div>
 
         <div class="stack">
             (sheet) get-element-by-id (sheet) var
             (table) create-element (table) var
-            
+
+            (tr) create-element (tr) var
+
+            (td) create-element (td) var
+            td tr append-child
+
+            0 10 1 range (j) (
+                (td) create-element (td) var
+                j td set-inner-html
+                td tr append-child
+            ) for
+            tr table append-child
+
             0 30 1 range (i) (
                 (tr) create-element (tr) var
+
+                (td) create-element (td) var
+                i td set-inner-html
+                td tr append-child 
+
                 0 10 1 range (j) (
                     (td) create-element (td) var
                     (input) create-element (cell) var
@@ -41,7 +58,7 @@
                     const inputs = document.querySelectorAll('input');
                     let program;
 
-                    inputs.forEach(input => {
+                 inputs.forEach(input => {
                         program +=`${input.value} ${input.id} var\n`;
                     });
                     document.activeElement.value = window.run_stack(`${program.replace("undefined", "")} ${document.activeElement.value} print`).output();

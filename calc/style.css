@@ -17,13 +17,19 @@ header p {
     overflow: scroll;
 }
 
-input {
+td {
+    text-align: center;
+
     border-top: none;
     border-left: none;
 
-    border-bottom-color: gray;
-    border-right-color: gray;
+    border-bottom-color: lightgray;
+    border-right-color: lightgray;
 
     border-bottom-width: 1px;
     border-right-width: 1px;
+}
+
+input {
+    border: none;
 }
