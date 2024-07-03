@@ -1,0 +1,14 @@
+.jumbotron {
+    background:linear-gradient(to right, blueviolet, rgb(231, 193, 238));
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 6rem 1rem;
+}
+
+.project-card {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    color: #333333;
+}

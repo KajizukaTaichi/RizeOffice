@@ -10,8 +10,8 @@
     <body>
 
         <header>
-            <p onclick="window.open('https://github.com/KajizukaTaichi/RizeOffice/')" style="font-size: 30px;">
-                RizeOffice Clac - Built on Stack technology
+            <p style="font-size: 30px;">
+                <span onclick="window.location = ('/')">RizeOffice</span> Clac
             </p>
         </header>
 
@@ -56,12 +56,11 @@
             document.addEventListener("keydown", function(event) {
                 if (event.code === "Enter") {
                     const inputs = document.querySelectorAll('input');
-                    let program;
-
-                 inputs.forEach(input => {
+                    let program = "";
+                    inputs.forEach(input => {
                         program +=`${input.value} ${input.id} var\n`;
                     });
-                    document.activeElement.value = window.run_stack(`${program.replace("undefined", "")} ${document.activeElement.value} print`).output();
+                    document.activeElement.value = window.run_stack(`${program} ${document.activeElement.value} print`).output();
                 }
             });
         </script>
