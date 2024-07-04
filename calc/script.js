@@ -6,19 +6,19 @@ document.getElementById("sheet").addEventListener("keydown", function(event) {
             program +=`${input.value} ${input.id} var\n`;
         });
         document.activeElement.value = window.run_stack(`${program} ${document.activeElement.value} print`).output();
-    } else if (event.code === "ArrowLeft" || event.key === "ArrowLeft") {
+    } else if (event.shiftKey && (event.code === "ArrowLeft" || event.key === "ArrowLeft")) {
         let [row, col] = document.activeElement.id.split("-");
         [row, col] = [parseInt(row), parseInt(col)];
         document.getElementById(`${row}-${col - 1}`).focus()
-    } else if (event.code === "ArrowRight" || event.key === "ArrowRight") {
+    } else if (event.shiftKey && (event.code === "ArrowRight" || event.key === "ArrowRight")) {
         let [row, col] = document.activeElement.id.split("-");
         [row, col] = [parseInt(row), parseInt(col)];
         document.getElementById(`${row}-${col + 1}`).focus()
-    } else if (event.code === "ArrowUp" || event.key === "ArrowUp") {
+    } else if (event.shiftKey && (event.code === "ArrowUp" || event.key === "ArrowUp")) {
         let [row, col] = document.activeElement.id.split("-");
         [row, col] = [parseInt(row), parseInt(col)];
         document.getElementById(`${row - 1}-${col}`).focus()
-    } else if (event.code === "ArrowDown" || event.key === "ArrowDown") {
+    } else if (event.shiftKey && (event.code === "ArrowDown" || event.key === "ArrowDown")) {
         let [row, col] = document.activeElement.id.split("-");
         [row, col] = [parseInt(row), parseInt(col)];
         console.log(`${row + 1}-${col}`);
