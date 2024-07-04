@@ -56,3 +56,12 @@ document.getElementById("backColor").addEventListener("keydown", function(event)
         previousActiveElement.style.backgroundColor = document.getElementById("backColor").value;
     }
 });
+
+document.getElementById("imgUrl").addEventListener("keydown", function(event) {
+    if (event.code === "Enter" || event.key === "Enter") {
+        previousActiveElement.style.backgroundImage =  `url("${document.getElementById("imgUrl").value}")`;
+        previousActiveElement.style.backgroundSize = "auto 100%";
+        previousActiveElement.style.backgroundRepeat = "no-repeat";
+        previousActiveElement.style.backgroundPosition = " center";
+    }
+});
