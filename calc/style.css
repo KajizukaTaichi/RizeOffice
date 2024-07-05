@@ -24,6 +24,10 @@ header {
     border-width: 1px;
 }
 
+.splitLine input {
+    width: 75px;
+}
+
 header p {
     padding: 2vh;
 }
