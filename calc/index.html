@@ -16,9 +16,15 @@
         </header>
 
         <div id="menubar">
+
+            <div class="splitLine">
+                <label for="fontSize">Font style: </label>
+                <input id="fontStyle">
+            </div>
+
             <div class="splitLine">
                 <label for="fontSize">Font size: </label>
-                <input id="fontSize">
+                <input id="fontSize" type="number">
             </div>
 
             <div class="splitLine">
@@ -33,14 +39,14 @@
 
             <div class="splitLine">
                 <label for="imgUrl">Insert picture: </label>
-                <input id="imgUrl">
+                <input id="imgUrl" style="width: 150px;" placeholder="Image's url is here.">
             </div>
         </div>
         <div id="sheet"></div>
 
         <div class="stack">
             (sheet) get-element-by-id (sheet) var
-            (table) create-element (table) var
+            (table) create-element (table) var 
 
             (tr) create-element (tr) var
 
