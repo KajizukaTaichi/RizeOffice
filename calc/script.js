@@ -38,10 +38,15 @@ document.getElementById("sheet").addEventListener('focusout', function(event) {
     currentActiveElement = null;
 });
 
+document.getElementById("fontStyle").addEventListener("keydown", function(event) {
+    if (event.code === "Enter" || event.key === "Enter") {
+        previousActiveElement.style.fontStyle = document.getElementById("fontStyle").value;
+    }
+});
 
 document.getElementById("fontSize").addEventListener("keydown", function(event) {
     if (event.code === "Enter" || event.key === "Enter") {
-        previousActiveElement.style.fontSize = document.getElementById("fontSize").value;
+        previousActiveElement.style.fontSize = document.getElementById("fontSize").value + "px";
     }
 });
 
@@ -64,4 +69,4 @@ document.getElementById("imgUrl").addEventListener("keydown", function(event) {
         previousActiveElement.style.backgroundRepeat = "no-repeat";
         previousActiveElement.style.backgroundPosition = " center";
     }
-});
+})
